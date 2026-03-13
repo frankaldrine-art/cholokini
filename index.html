@@ -7,38 +7,42 @@
     <style>
         :root {
             --daraz-orange: #f85606;
-            --panda-pink: #d70f64;
             --bg-gray: #eff0f5;
             --white: #ffffff;
         }
         
         body { font-family: 'Roboto', sans-serif; margin: 0; background-color: var(--bg-gray); padding-bottom: 70px; }
 
-        /* Search Bar Area - Daraz Style */
         header { background-color: var(--daraz-orange); padding: 10px 5%; position: sticky; top: 0; z-index: 1000; }
         .search-container { display: flex; align-items: center; background: white; border-radius: 5px; padding: 5px 15px; }
         .search-container input { border: none; width: 100%; padding: 8px; outline: none; }
         
-        /* Brand Banner */
-        .brand-banner { background: white; padding: 15px; text-align: center; margin-bottom: 10px; border-bottom: 1px solid #ddd; }
+        /* Updated Brand Banner to fit your Logo */
+        .brand-banner { background: white; padding: 20px 15px; text-align: center; border-bottom: 1px solid #ddd; }
+        
+        /* This handles your logo image */
+        .brand-logo { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%; /* Makes it circular like your photo */
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
         .brand-banner h1 { margin: 0; font-size: 1.5rem; color: #333; }
         .brand-banner span { color: var(--daraz-orange); font-weight: bold; }
 
-        /* Product Grid */
         .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; }
-        
         .product-card { background: var(--white); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
         .product-image { width: 100%; height: 160px; object-fit: cover; }
         .product-info { padding: 10px; flex-grow: 1; }
         .product-title { font-size: 0.9rem; height: 35px; overflow: hidden; margin-bottom: 5px; }
         .product-price { color: var(--daraz-orange); font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; }
-        
         .buy-now { background: var(--daraz-orange); color: white; text-align: center; padding: 8px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
 
-        /* Bottom Nav - App Style */
-        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); }
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
         .nav-item { text-align: center; text-decoration: none; color: #666; font-size: 0.7rem; }
-        .nav-item div { font-size: 1.2rem; margin-bottom: 2px; }
 
         @media (min-width: 768px) {
             .product-grid { grid-template-columns: repeat(4, 1fr); max-width: 1100px; margin: auto; }
@@ -55,6 +59,7 @@
 </header>
 
 <div class="brand-banner">
+    <img src="logo.jpg" alt="Cholo Kini Logo" class="brand-logo">
     <h1>চলো কিনি <span>BY FAC MART</span></h1>
     <p style="font-size: 0.8rem; color: #777;">Launching March 15, 2026</p>
 </div>
@@ -65,41 +70,14 @@
         <div class="product-info">
             <div class="product-title">Premium Edition Smart Watch</div>
             <div class="product-price">৳ 2,450</div>
-            <a href="https://wa.me/01534888389?text=Buy%20Smart%20Watch" class="buy-now">ORDER NOW</a>
+            <a href="https://wa.me/8801534888389?text=Buy%20Smart%20Watch" class="buy-now">ORDER NOW</a>
         </div>
     </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1550291652-6ea9114a47b1?auto=format&fit=crop&w=400" class="product-image">
-        <div class="product-info">
-            <div class="product-title">Acoustic Guitar - Deep Blue</div>
-            <div class="product-price">৳ 5,800</div>
-            <a href="https://wa.me/YOUR_NUMBER_HERE?text=Buy%20Guitar" class="buy-now">ORDER NOW</a>
-        </div>
     </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400" class="product-image">
-        <div class="product-info">
-            <div class="product-title">Wireless Gaming Headphones</div>
-            <div class="product-price">৳ 1,200</div>
-            <a href="https://wa.me/YOUR_NUMBER_HERE?text=Buy%20Headphones" class="buy-now">ORDER NOW</a>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&w=400" class="product-image">
-        <div class="product-info">
-            <div class="product-title">Luxury Leather Watch</div>
-            <div class="product-price">৳ 1,850</div>
-            <a href="https://wa.me/YOUR_NUMBER_HERE?text=Buy%20Leather%20Watch" class="buy-now">ORDER NOW</a>
-        </div>
-    </div>
-</div>
 
 <div class="bottom-nav">
     <a href="#" class="nav-item"><div>🏠</div>Home</a>
-    <a href="https://wa.me/YOUR_NUMBER_HERE" class="nav-item"><div>💬</div>Chat</a>
+    <a href="https://wa.me/8801534888389" class="nav-item"><div>💬</div>Chat</a>
     <a href="#" class="nav-item"><div>🛒</div>Cart</a>
     <a href="#" class="nav-item"><div>👤</div>Account</a>
 </div>
