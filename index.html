@@ -7,6 +7,7 @@
     <style>
         :root {
             --daraz-orange: #f85606;
+            --facebook-blue: #1877F2;
             --bg-gray: #eff0f5;
             --white: #ffffff;
         }
@@ -17,21 +18,34 @@
         .search-container { display: flex; align-items: center; background: white; border-radius: 5px; padding: 5px 15px; }
         .search-container input { border: none; width: 100%; padding: 8px; outline: none; }
         
-        /* Updated Brand Banner to fit your Logo */
         .brand-banner { background: white; padding: 20px 15px; text-align: center; border-bottom: 1px solid #ddd; }
         
-        /* This handles your logo image */
+        /* Your Logo Styling */
         .brand-logo { 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 50%; /* Makes it circular like your photo */
+            width: 90px; 
+            height: 90px; 
+            border-radius: 50%; 
             object-fit: cover;
             margin-bottom: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 2px solid var(--bg-gray);
         }
 
         .brand-banner h1 { margin: 0; font-size: 1.5rem; color: #333; }
         .brand-banner span { color: var(--daraz-orange); font-weight: bold; }
+
+        /* Facebook Button Styling */
+        .fb-btn {
+            background-color: var(--facebook-blue);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
 
         .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; }
         .product-card { background: var(--white); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
@@ -41,7 +55,7 @@
         .product-price { color: var(--daraz-orange); font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; }
         .buy-now { background: var(--daraz-orange); color: white; text-align: center; padding: 8px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
 
-        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; z-index: 1000; }
         .nav-item { text-align: center; text-decoration: none; color: #666; font-size: 0.7rem; }
 
         @media (min-width: 768px) {
@@ -62,6 +76,8 @@
     <img src="logo.jpg" alt="Cholo Kini Logo" class="brand-logo">
     <h1>চলো কিনি <span>BY FAC MART</span></h1>
     <p style="font-size: 0.8rem; color: #777;">Launching March 15, 2026</p>
+    
+    <a href="https://www.facebook.com/share/1EotaZinfo/" target="_blank" class="fb-btn">👍 Follow on Facebook</a>
 </div>
 
 <div class="product-grid">
@@ -73,12 +89,21 @@
             <a href="https://wa.me/8801534888389?text=Buy%20Smart%20Watch" class="buy-now">ORDER NOW</a>
         </div>
     </div>
+    
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1550291652-6ea9114a47b1?auto=format&fit=crop&w=400" class="product-image">
+        <div class="product-info">
+            <div class="product-title">Acoustic Guitar - Deep Blue</div>
+            <div class="product-price">৳ 5,800</div>
+            <a href="https://wa.me/8801534888389?text=Buy%20Guitar" class="buy-now">ORDER NOW</a>
+        </div>
     </div>
+</div>
 
 <div class="bottom-nav">
     <a href="#" class="nav-item"><div>🏠</div>Home</a>
+    <a href="https://www.facebook.com/share/1EotaZinfo/" target="_blank" class="nav-item"><div>🔵</div>Facebook</a>
     <a href="https://wa.me/8801534888389" class="nav-item"><div>💬</div>Chat</a>
-    <a href="#" class="nav-item"><div>🛒</div>Cart</a>
     <a href="#" class="nav-item"><div>👤</div>Account</a>
 </div>
 
